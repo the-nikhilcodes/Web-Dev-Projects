@@ -1,0 +1,78 @@
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background: #fcf1cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.1) 0px 4px 8px;
+  width: 350px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #212121;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f2bd12;
+}
+
+.btn {
+  background: #f2bd12;
+  border: none;
+  padding: 0.9rem;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #212121;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+p a {
+  color: #f2bd12;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
