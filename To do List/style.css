@@ -1,0 +1,133 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.todo-container {
+  background: #fff;
+  width: 400px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.todo-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input Section */
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #764ba2;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.todo-input input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px #667eea;
+}
+
+.todo-input button {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.todo-input button:hover {
+  background: #5643cc;
+  transform: scale(1.05);
+}
+
+/* Task List */
+#taskList {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#taskList li:hover {
+  background: #e3e3e3;
+}
+
+/* Task Text */
+#taskList li span {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Completed Task */
+#taskList li.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Delete Button */
+.deleteBtn {
+  background: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #e84343;
+  transform: scale(1.1);
+}
+
+/* Scrollbar */
+#taskList::-webkit-scrollbar {
+  width: 6px;
+}
+#taskList::-webkit-scrollbar-thumb {
+  background-color: #667eea;
+  border-radius: 3px;
+}
