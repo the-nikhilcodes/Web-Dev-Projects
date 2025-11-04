@@ -1,23 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather App</title>
+
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
-    <h1>Weather App</h1>
-    <div class="search">
-      <input id="city-input" placeholder="Enter city name" />
-      <button id="search-btn">Search</button>
+  <!-- Navbar -->
+  <nav>
+    <h1>🌤️ Weather App</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Forecast</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section class="home">
+    <h2>Check Your City Weather</h2>
+    <p>Enter your city name below:</p>
+
+    <div class="search-box">
+      <input type="text" id="city" placeholder="Enter city name">
+      <button id="searchBtn">Search</button>
     </div>
-    <div id="weather-card" class="weather-card">
-      <!-- populate via JS -->
-      <p class="placeholder">Search a city to see weather</p>
-    </div>
-  </main>
+
+    <h3 id="result"></h3>
+  </section>
+
+  <!-- Link to JS -->
   <script src="script.js"></script>
 </body>
 </html>
