@@ -1,0 +1,133 @@
+:root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --primary: #2563eb;
+    --text: #1f2937;
+    --muted: #9ca3af;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --primary: #38bdf8;
+    --text: #e5e7eb;
+    --muted: #64748b;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text);
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 360px;
+    background: var(--card);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.calendar-header button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.selectors {
+    display: flex;
+    gap: 6px;
+}
+
+select {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid var(--muted);
+    background: var(--card);
+    color: var(--text);
+}
+
+.weekdays,
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.weekdays span {
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 6px;
+}
+
+.days {
+    gap: 6px;
+}
+
+.day {
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.day:hover {
+    background: rgba(37, 99, 235, 0.15);
+}
+
+.today {
+    background: var(--primary);
+    color: #fff;
+    font-weight: bold;
+}
+
+.inactive {
+    visibility: hidden;
+}
+
+.event::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: crimson;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 6px;
+}
+
+.calendar-footer {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.calendar-footer button {
+    background: none;
+    border: 1px solid var(--muted);
+    padding: 6px 12px;
+    border-radius: 8px;
+    color: var(--text);
+    cursor: pointer;
+}
